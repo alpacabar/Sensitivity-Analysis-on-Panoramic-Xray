@@ -33,8 +33,6 @@ The images are pre-labeled with bounding boxes around the relevant dental region
 *Visualization:*
 - A bar chart visualizes the number of images in each sensitivity category ("High," "Moderate," and "Low").
 
-*Adaptive Noise Application:*
-- Sensitivity classifications guide the level of differential privacy noise applied to gradients during training, ensuring privacy without significant loss of utility.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 3) Code Implementation
@@ -47,9 +45,6 @@ The code processes the panoramic X-rays, classifies their sensitivity, and visua
   
 *Sensitivity Classification:*
 - Combines structural and deep learning detections to classify images into "High," "Moderate," or "Low" sensitivity.
-
-*Adaptive Differential Privacy:*
-- Sensitivity levels guide the amount of noise added to gradients during model training.
 
 *Visualization:*
 - A bar chart shows the distribution of sensitivity levels across the dataset.
