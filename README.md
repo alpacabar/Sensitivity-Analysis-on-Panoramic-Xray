@@ -5,7 +5,7 @@ Jawbone anomalies: Distinct or rare bone patterns.
 Sinus patterns: Unique sinus shapes.
 Metadata, such as personally identifiable information (PII) if available.
 Dataset
-The dataset used for this project is from Roboflow Universe, specifically tailored for dental X-ray analysis. It consists of:
+The dataset used for this project is from Roboflow Universe (link: https://universe.roboflow.com/dentex/dentex-3xe7e/dataset/2), specifically tailored for dental X-ray analysis. It consists of:
 
 Training Set: 873 images (81%)
 Validation Set: 40 images (4%)
