@@ -58,3 +58,16 @@ High Sensitivity: Images with unique biometric patterns.
 Moderate Sensitivity: Images with general biometric features.
 Low Sensitivity: Images with no distinguishing patterns.
 The sensitivity distribution was visualized using a bar chart.
+
+
+Dependencies
+Programming Language: Python
+Libraries:
+torch for PyTorch-based computations
+ultralytics for YOLOv8
+opencv-python for image processing
+matplotlib for visualization
+numpy for numerical operations
+Pillow for image handling
+scipy for optimization
+
