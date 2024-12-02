@@ -4,66 +4,67 @@ Unique tooth structures: Specific arrangements, missing teeth, or dental restora
 Jawbone anomalies: Distinct or rare bone patterns.
 Sinus patterns: Unique sinus shapes.
 Metadata, such as personally identifiable information (PII) if available.
-Dataset
-The dataset used for this project is from Roboflow Universe (link: https://universe.roboflow.com/dentex/dentex-3xe7e/dataset/2), specifically tailored for dental X-ray analysis. It consists of:
 
-Training Set: 873 images (81%)
-Validation Set: 40 images (4%)
-Test Set: 165 images (15%)
+*Dataset*
+The dataset used for this project is from Roboflow Universe (link: https://universe.roboflow.com/dentex/dentex-3xe7e/dataset/2), specifically tailored for dental X-ray analysis. It consists of:
+- Training Set: 873 images (81%)
+- Validation Set: 40 images (4%)
+- Test Set: 165 images (15%)
+
 The images are pre-labeled with bounding boxes around the relevant dental regions, allowing for the detection of biometric patterns.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 2) Methodology
-Preprocessing:
+*Preprocessing:*
+- Contrast Enhancement: Applied CLAHE (Contrast Limited Adaptive Histogram Equalization) for improving visibility.
+- Noise Reduction: Gaussian blur was used to smooth the images and reduce noise.
+- Edge Detection: Canny edge detection highlighted key structures for analysis.
 
-Contrast Enhancement: Applied CLAHE (Contrast Limited Adaptive Histogram Equalization) for improving visibility.
-Noise Reduction: Gaussian blur was used to smooth the images and reduce noise.
-Edge Detection: Canny edge detection highlighted key structures for analysis.
-Feature Detection:
+*Feature Detection:*
+- Structural Features: Contour-based bounding box detection was used to identify potential regions of interest (e.g., teeth, jaws, sinuses).
+- Deep Learning Detection: A pre-trained YOLOv8 model fine-tuned on dental X-rays was employed to detect advanced features, such as anomalies and restorations.
+  
+*Sensitivity Classification:*
+- High Sensitivity: Images containing unique biometric features like missing teeth, anomalies, or restorations.
+- Moderate Sensitivity: Images with general structures like typical tooth or jaw patterns without distinct anomalies.
+- Low Sensitivity: Images with no identifiable features or only generic patterns.
+  
+*Visualization:*
+- A bar chart visualizes the number of images in each sensitivity category ("High," "Moderate," and "Low").
 
-Structural Features: Contour-based bounding box detection was used to identify potential regions of interest (e.g., teeth, jaws, sinuses).
-Deep Learning Detection: A pre-trained YOLOv8 model fine-tuned on dental X-rays was employed to detect advanced features, such as anomalies and restorations.
-Sensitivity Classification:
-
-High Sensitivity: Images containing unique biometric features like missing teeth, anomalies, or restorations.
-Moderate Sensitivity: Images with general structures like typical tooth or jaw patterns without distinct anomalies.
-Low Sensitivity: Images with no identifiable features or only generic patterns.
-Visualization:
-
-A bar chart visualizes the number of images in each sensitivity category ("High," "Moderate," and "Low").
-Adaptive Noise Application:
-
-Sensitivity classifications guide the level of differential privacy noise applied to gradients during training, ensuring privacy without significant loss of utility.
+*Adaptive Noise Application:*
+- Sensitivity classifications guide the level of differential privacy noise applied to gradients during training, ensuring privacy without significant loss of utility.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 3) Code Implementation
 The code processes the panoramic X-rays, classifies their sensitivity, and visualizes the distribution of sensitivity levels. Below are the key components:
 
-Preprocessing and Feature Detection:
+*Preprocessing and Feature Detection:*
+- CLAHE, Gaussian blur, and Canny edge detection for structural analysis.
+- YOLOv8 for advanced feature detection.
+  
+*Sensitivity Classification:*
+- Combines structural and deep learning detections to classify images into "High," "Moderate," or "Low" sensitivity.
 
-CLAHE, Gaussian blur, and Canny edge detection for structural analysis.
-YOLOv8 for advanced feature detection.
-Sensitivity Classification:
+*Adaptive Differential Privacy:*
+- Sensitivity levels guide the amount of noise added to gradients during model training.
 
-Combines structural and deep learning detections to classify images into "High," "Moderate," or "Low" sensitivity.
-Adaptive Differential Privacy:
-
-Sensitivity levels guide the amount of noise added to gradients during model training.
-Visualization:
-
-A bar chart shows the distribution of sensitivity levels across the dataset.
+*Visualization:*
+- A bar chart shows the distribution of sensitivity levels across the dataset.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 4) Results
 The dataset was classified into the following sensitivity levels:
 
-High Sensitivity: Images with unique biometric patterns.
-Moderate Sensitivity: Images with general biometric features.
-Low Sensitivity: Images with no distinguishing patterns.
+- High Sensitivity: Images with unique biometric patterns.
+- Moderate Sensitivity: Images with general biometric features.
+- Low Sensitivity: Images with no distinguishing patterns.
+- 
 The sensitivity distribution was visualized using a bar chart.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-Dependencies
+*Dependencies*
+
 Programming Language: Python
 Libraries:
 torch for PyTorch-based computations
