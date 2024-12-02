@@ -57,7 +57,7 @@ The dataset was classified into the following sensitivity levels:
 - High Sensitivity: Images with unique biometric patterns.
 - Moderate Sensitivity: Images with general biometric features.
 - Low Sensitivity: Images with no distinguishing patterns.
-- 
+  
 The sensitivity distribution was visualized using a bar chart.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
