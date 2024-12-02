@@ -12,6 +12,7 @@ Validation Set: 40 images (4%)
 Test Set: 165 images (15%)
 The images are pre-labeled with bounding boxes around the relevant dental regions, allowing for the detection of biometric patterns.
 
+----------------------------------------------------------------------------------------------------------------------------------------
 2) Methodology
 Preprocessing:
 
@@ -34,6 +35,7 @@ Adaptive Noise Application:
 
 Sensitivity classifications guide the level of differential privacy noise applied to gradients during training, ensuring privacy without significant loss of utility.
 
+----------------------------------------------------------------------------------------------------------------------------------------
 3) Code Implementation
 The code processes the panoramic X-rays, classifies their sensitivity, and visualizes the distribution of sensitivity levels. Below are the key components:
 
@@ -51,6 +53,7 @@ Visualization:
 
 A bar chart shows the distribution of sensitivity levels across the dataset.
 
+----------------------------------------------------------------------------------------------------------------------------------------
 4) Results
 The dataset was classified into the following sensitivity levels:
 
@@ -59,7 +62,7 @@ Moderate Sensitivity: Images with general biometric features.
 Low Sensitivity: Images with no distinguishing patterns.
 The sensitivity distribution was visualized using a bar chart.
 
-
+----------------------------------------------------------------------------------------------------------------------------------------
 Dependencies
 Programming Language: Python
 Libraries:
