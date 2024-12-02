@@ -1,9 +1,9 @@
 I am classifying the sensitivity of panoramic X-rays based on biometric patterns in the images rather than text content (which may be unnatural). This approach uses image processing and feature detection techniques to identify patterns such as:
 
-Unique tooth structures: Specific arrangements, missing teeth, or dental restorations.
-Jawbone anomalies: Distinct or rare bone patterns.
-Sinus patterns: Unique sinus shapes.
-Metadata, such as personally identifiable information (PII) if available.
+- Unique tooth structures: Specific arrangements, missing teeth, or dental restorations.
+- Jawbone anomalies: Distinct or rare bone patterns.
+- Sinus patterns: Unique sinus shapes.
+- Metadata, such as personally identifiable information (PII) if available.
 
 *Dataset*
 The dataset used for this project is from Roboflow Universe (link: https://universe.roboflow.com/dentex/dentex-3xe7e/dataset/2), specifically tailored for dental X-ray analysis. It consists of:
