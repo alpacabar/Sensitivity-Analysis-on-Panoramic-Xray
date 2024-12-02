@@ -15,6 +15,7 @@ The images are pre-labeled with bounding boxes around the relevant dental region
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 2) Methodology
+   
 *Preprocessing:*
 - Contrast Enhancement: Applied CLAHE (Contrast Limited Adaptive Histogram Equalization) for improving visibility.
 - Noise Reduction: Gaussian blur was used to smooth the images and reduce noise.
@@ -37,6 +38,7 @@ The images are pre-labeled with bounding boxes around the relevant dental region
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 3) Code Implementation
+   
 The code processes the panoramic X-rays, classifies their sensitivity, and visualizes the distribution of sensitivity levels. Below are the key components:
 
 *Preprocessing and Feature Detection:*
@@ -54,6 +56,7 @@ The code processes the panoramic X-rays, classifies their sensitivity, and visua
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 4) Results
+   
 The dataset was classified into the following sensitivity levels:
 
 - High Sensitivity: Images with unique biometric patterns.
@@ -66,12 +69,13 @@ The sensitivity distribution was visualized using a bar chart.
 *Dependencies*
 
 Programming Language: Python
+
 Libraries:
-torch for PyTorch-based computations
-ultralytics for YOLOv8
-opencv-python for image processing
-matplotlib for visualization
-numpy for numerical operations
-Pillow for image handling
-scipy for optimization
+- torch for PyTorch-based computations
+- ultralytics for YOLOv8
+- opencv-python for image processing
+- matplotlib for visualization
+- numpy for numerical operations
+- Pillow for image handling
+- scipy for optimization
 
