@@ -16,10 +16,10 @@ Fine-tuning YOLO on a dental dataset (like your panoramic X-rays) improves its a
 3. Combination of Structural and YOLO Features: Combining contour-based detection (structural features) with YOLO ensures a balance between simple geometric feature extraction and deep learning-driven insights.
 
 However, there are few limitations that require attention:
-1. Model Dependence: The trustworthiness of YOLO detections depends heavily on the quality and diversity of the training dataset. If the model isn't well-trained on panoramic X-rays, false positives or missed detections are more likely.
-2. Simplistic Structural Analysis: Contour-based detection relies on edge clarity, which can be affected by noise or poor image quality, leading to either under-detection or over-detection of features.
-3. No Context Awareness: The classification doesn’t account for clinical context (e.g., is a missing tooth part of a known treatment or an anomaly?).
-4. Threshold Sensitivity: The sensitivity thresholds for "High," "Moderate," and "Low" are heuristic and might need adjustment for different datasets or clinical needs.
+1. Model Dependence: Detection accuracy is tied to the quality and diversity of the training dataset. Inadequate training may lead to false positives or missed detections.
+2. Simplistic Structural Analysis: Contour-based detection relies on clear edges, which may fail in noisy or low-quality images.
+3. Context Awareness: Sensitivity classification does not yet account for clinical context (e.g., known treatments vs anomalies).
+4. Threshold Sensitivity: Current thresholds for classification (e.g., label counts, YOLO detections) are heuristic and may require refinement for specific datasets.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 *Why this detection is important?*
@@ -38,8 +38,8 @@ The dataset used for this project is from Roboflow Universe (link: https://unive
 - Test Set: 165 images (15%)
 
 The dataset includes pre-labeled bounding boxes for dental regions, enabling precise detection and classification of biometric patterns.
-
 ----------------------------------------------------------------------------------------------------------------------------------------
+
 2) Methodology
    
 *Preprocessing:*
@@ -58,8 +58,8 @@ The dataset includes pre-labeled bounding boxes for dental regions, enabling pre
   
 *Visualization:*
 - A bar chart visualizes the number of images in each sensitivity category ("High," "Moderate," and "Low").
-
 ----------------------------------------------------------------------------------------------------------------------------------------
+
 3) Code Implementation
    
 The code processes the panoramic X-rays, classifies their sensitivity, and visualizes the distribution of sensitivity levels. Below are the key components:
@@ -75,8 +75,8 @@ The code processes the panoramic X-rays, classifies their sensitivity, and visua
 
 *Visualization:*
 - A bar chart shows the distribution of sensitivity levels across the dataset.
-
 ----------------------------------------------------------------------------------------------------------------------------------------
+
 4) Results
    
 The dataset was classified into the following sensitivity levels:
@@ -86,8 +86,8 @@ The dataset was classified into the following sensitivity levels:
 - Low Sensitivity: Images with no distinguishing patterns.
   
 The sensitivity distribution was visualized using a bar chart.
-
 ----------------------------------------------------------------------------------------------------------------------------------------
+
 *Dependencies*
 
 Programming Language: Python
