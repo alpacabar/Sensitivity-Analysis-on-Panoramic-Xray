@@ -11,10 +11,9 @@ I am classifying the sensitivity of panoramic X-rays based on biometric patterns
 
 *How trustworthy is this detection?*
 
-1. Preprocessing Enhances Detection: Contrast enhancement (CLAHE), noise reduction, and edge detection improve the visibility of features, allowing both contour analysis and YOLO to work effectively.
-2. YOLO: YOLO (You Only Look Once) is a state-of-the-art object detection model designed for real-time and robust detection tasks.
-Fine-tuning YOLO on a dental dataset (like your panoramic X-rays) improves its ability to identify anomalies, restorations, and structural patterns.
-3. Combination of Structural and YOLO Features: Combining contour-based detection (structural features) with YOLO ensures a balance between simple geometric feature extraction and deep learning-driven insights.
+1. Preprocessing Enhances Detection: Techniques like CLAHE, noise reduction, and edge detection improve feature visibility, supporting both structural and YOLO-based analysis.
+2. YOLO: YOLOv8, a state-of-the-art object detection model, ensures reliable and real-time detections when fine-tuned on a dental dataset.
+3. Combination of Structural and YOLO Features: Integrates structural contour-based features with YOLO to achieve a balance between traditional image analysis and deep learning.
 
 However, there are few limitations that require attention:
 1. Model Dependence: Detection accuracy is tied to the quality and diversity of the training dataset. Inadequate training may lead to false positives or missed detections.
