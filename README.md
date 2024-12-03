@@ -61,7 +61,7 @@ The dataset includes pre-labeled bounding boxes for dental regions, enabling pre
   
 *Visualization:*
 - A bar chart visualizes the number of images in each sensitivity category ("High," "Moderate," and "Low").
-- 
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 3) Code Implementation
