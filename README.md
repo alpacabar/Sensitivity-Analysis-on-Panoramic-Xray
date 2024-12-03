@@ -5,6 +5,27 @@ I am classifying the sensitivity of panoramic X-rays based on biometric patterns
 - Sinus patterns: Unique sinus shapes.
 - Metadata, such as personally identifiable information (PII) if available.
 
+----------------------------------------------------------------------------------------------------------------------------------------
+*How trustworthy is this detection?*
+
+1. Preprocessing Enhances Detection: Contrast enhancement (CLAHE), noise reduction, and edge detection improve the visibility of features, allowing both contour analysis and YOLO to work effectively.
+2. YOLO: YOLO (You Only Look Once) is a state-of-the-art object detection model designed for real-time and robust detection tasks.
+Fine-tuning YOLO on a dental dataset (like your panoramic X-rays) improves its ability to identify anomalies, restorations, and structural patterns.
+3. Combination of Structural and YOLO Features: Combining contour-based detection (structural features) with YOLO ensures a balance between simple geometric feature extraction and deep learning-driven insights.
+
+However, there are few limitations that require attention:
+1. Model Dependence: The trustworthiness of YOLO detections depends heavily on the quality and diversity of the training dataset. If the model isn't well-trained on panoramic X-rays, false positives or missed detections are more likely.
+2. Simplistic Structural Analysis: Contour-based detection relies on edge clarity, which can be affected by noise or poor image quality, leading to either under-detection or over-detection of features.
+3. No Context Awareness: The classification doesn’t account for clinical context (e.g., is a missing tooth part of a known treatment or an anomaly?).
+4. Threshold Sensitivity: The sensitivity thresholds for "High," "Moderate," and "Low" are heuristic and might need adjustment for different datasets or clinical needs.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+*Why this detection is important?*
+
+It bridges the gap between raw data and actionable insights in dental radiology. While its current trustworthiness depends on training data and parameters, its potential to protect privacy, assist clinical decisions, and enhance AI applications in healthcare makes it a valuable tool.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
 *Dataset*
 The dataset used for this project is from Roboflow Universe (link: https://universe.roboflow.com/dentex/dentex-3xe7e/dataset/2), specifically tailored for dental X-ray analysis. It consists of:
 - Training Set: 873 images (81%)
