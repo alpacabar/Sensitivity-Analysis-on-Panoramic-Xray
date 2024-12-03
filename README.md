@@ -78,7 +78,7 @@ The code processes the panoramic X-rays, classifies their sensitivity, and visua
 
 *Visualization:*
 - A bar chart shows the distribution of sensitivity levels across the dataset.
-- 
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 4) Results
