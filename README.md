@@ -8,6 +8,7 @@ I am classifying the sensitivity of panoramic X-rays based on biometric patterns
 - Metadata, such as personally identifiable information (PII) if available.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+
 *How trustworthy is this detection?*
 
 1. Preprocessing Enhances Detection: Contrast enhancement (CLAHE), noise reduction, and edge detection improve the visibility of features, allowing both contour analysis and YOLO to work effectively.
@@ -22,6 +23,7 @@ However, there are few limitations that require attention:
 4. Threshold Sensitivity: Current thresholds for classification (e.g., label counts, YOLO detections) are heuristic and may require refinement for specific datasets.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+
 *Why this detection is important?*
 
 This methodology bridges the gap between raw imaging data and actionable insights in dental radiology. It is particularly significant for:
@@ -38,6 +40,7 @@ The dataset used for this project is from Roboflow Universe (link: https://unive
 - Test Set: 165 images (15%)
 
 The dataset includes pre-labeled bounding boxes for dental regions, enabling precise detection and classification of biometric patterns.
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 2) Methodology
@@ -58,6 +61,7 @@ The dataset includes pre-labeled bounding boxes for dental regions, enabling pre
   
 *Visualization:*
 - A bar chart visualizes the number of images in each sensitivity category ("High," "Moderate," and "Low").
+- 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 3) Code Implementation
@@ -75,6 +79,7 @@ The code processes the panoramic X-rays, classifies their sensitivity, and visua
 
 *Visualization:*
 - A bar chart shows the distribution of sensitivity levels across the dataset.
+- 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 4) Results
@@ -86,6 +91,7 @@ The dataset was classified into the following sensitivity levels:
 - Low Sensitivity: Images with no distinguishing patterns.
   
 The sensitivity distribution was visualized using a bar chart.
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 *Dependencies*
