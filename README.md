@@ -1,3 +1,5 @@
+_Classifying Sensitivity in Panoramic X-rays_
+
 I am classifying the sensitivity of panoramic X-rays based on biometric patterns in the images rather than text content (which may be unnatural). This approach uses image processing and feature detection techniques to identify patterns such as:
 
 - Unique tooth structures: Specific arrangements, missing teeth, or dental restorations.
@@ -22,7 +24,10 @@ However, there are few limitations that require attention:
 ----------------------------------------------------------------------------------------------------------------------------------------
 *Why this detection is important?*
 
-It bridges the gap between raw data and actionable insights in dental radiology. While its current trustworthiness depends on training data and parameters, its potential to protect privacy, assist clinical decisions, and enhance AI applications in healthcare makes it a valuable tool.
+This methodology bridges the gap between raw imaging data and actionable insights in dental radiology. It is particularly significant for:
+- Privacy Protection: Identifying high-sensitivity images for secure handling under regulations like HIPAA or GDPR.
+- Clinical Decision Support: Assisting in identifying cases requiring detailed review (e.g., anomalies, restorations).
+- AI Enhancement: Enabling robust datasets for machine learning applications.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -32,7 +37,7 @@ The dataset used for this project is from Roboflow Universe (link: https://unive
 - Validation Set: 40 images (4%)
 - Test Set: 165 images (15%)
 
-The images are pre-labeled with bounding boxes around the relevant dental regions, allowing for the detection of biometric patterns.
+The dataset includes pre-labeled bounding boxes for dental regions, enabling precise detection and classification of biometric patterns.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 2) Methodology
@@ -54,18 +59,19 @@ The images are pre-labeled with bounding boxes around the relevant dental region
 *Visualization:*
 - A bar chart visualizes the number of images in each sensitivity category ("High," "Moderate," and "Low").
 
-
 ----------------------------------------------------------------------------------------------------------------------------------------
 3) Code Implementation
    
 The code processes the panoramic X-rays, classifies their sensitivity, and visualizes the distribution of sensitivity levels. Below are the key components:
 
-*Preprocessing and Feature Detection:*
+*Preprocessing:*
 - CLAHE, Gaussian blur, and Canny edge detection for structural analysis.
-- YOLOv8 for advanced feature detection.
+
+*Feature Detection:*
+- Combined YOLOv8 detections with structural feature analysis.
   
 *Sensitivity Classification:*
-- Combines structural and deep learning detections to classify images into "High," "Moderate," or "Low" sensitivity.
+- Integrated label content to refine classifications.
 
 *Visualization:*
 - A bar chart shows the distribution of sensitivity levels across the dataset.
@@ -95,5 +101,5 @@ Libraries:
 - Pillow for image handling
 - scipy for optimization
 
-----------------------------------------------------------------------------------------------------------------------------------------
+
 
