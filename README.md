@@ -95,3 +95,6 @@ Libraries:
 - Pillow for image handling
 - scipy for optimization
 
+----------------------------------------------------------------------------------------------------------------------------------------
+What I gonna do next is using label to assist the detection!
+
