@@ -47,8 +47,8 @@ The images are pre-labeled with bounding boxes around the relevant dental region
 - Deep Learning Detection: A pre-trained YOLOv8 model fine-tuned on dental X-rays was employed to detect advanced features, such as anomalies and restorations.
   
 *Sensitivity Classification:*
-- High Sensitivity: Images containing unique biometric features like missing teeth, anomalies, or restorations (num_yolo_detections > 5 or num_structural_features > 8)
-- Moderate Sensitivity: Images with general structures like typical tooth or jaw patterns without distinct anomalies (1 <= num_yolo_detections <= 5 or 3 <= num_structural_features <= 8)
+- High Sensitivity: Images containing unique biometric features like missing teeth, anomalies, or restorations (num_labels > 5 or num_yolo_detections > 5 or num_structural_features > 8)
+- Moderate Sensitivity: Images with general structures like typical tooth or jaw patterns without distinct anomalies (1 <= num_labels <= 5 or 1 <= num_yolo_detections <= 5 or 3 <= num_structural_features <= 8)
 - Low Sensitivity: Images with no identifiable features or only generic patterns 
   
 *Visualization:*
@@ -96,5 +96,4 @@ Libraries:
 - scipy for optimization
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-What I gonna do next is using label to assist the detection!
 
